@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio006</title>
+    <style>
+      div#area {
+        font: normal 20pt Arial;
+        background: rgb(28, 28, 132);
+        color: white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="area">Interaja...</div>
+    <script>
+      var area = window.document.querySelector("div#area")
+      area.addEventListener("click", clicar)
+      area.addEventListener("mouseenter", entrar)
+      area.addEventListener("mouseout", saiu)
+      function clicar() {
+        area.style.background = "green"
+        area.innerText = "Clicou!"
+      }
+
+      function entrar() {
+        area.style.background = "red"
+        area.innerHTML = "Entrou!"
+      }
+
+      function saiu() {
+        area.style.background = "rgb(28, 28, 132)"
+        area.innerHTML = "Saiu!"
+      }
+    </script>
+  </body>
+</html>
