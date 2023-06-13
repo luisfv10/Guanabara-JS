@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercio010</title>
+    <style>
+      div#suavelocidade {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sistema de Multas</h1>
+    <input type="number" name="txt_vel" id="txt_vel" />
+    <input type="button" value="Verificar" onclick="clicar()" />
+    <div id="sua_velocidade"></div>
+    <script>
+      function clicar() {
+        var vel_atual = window.document.querySelector("div#sua_velocidade")
+        var tvel = window.document.querySelector("input#txt_vel")
+        var vel = Number(tvel.value)
+        if (vel > 60) {
+          window.alert("Você foi multado por estar acima da velocidade")
+        } else {
+          window.alert("Você está dentro do limite de velocidade")
+        }
+        vel_atual.innerHTML = `Sua velocidade atual agora é de <strong>${vel}km/h</strong>`
+        vel_atual.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`
+      }
+    </script>
+  </body>
+</html>
